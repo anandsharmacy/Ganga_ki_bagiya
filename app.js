@@ -33,6 +33,11 @@ const toast = document.querySelector(".toast");
 let selectedCategory = "सभी";
 let toastTimeout;
 
+document.querySelector("#edition-date").textContent = new Intl.DateTimeFormat(
+  "hi-IN",
+  { weekday: "long", day: "numeric", month: "long" },
+).format(new Date());
+
 function bookmarkIcon() {
   return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-4-6 4V4.5Z" /></svg>';
 }
